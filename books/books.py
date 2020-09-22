@@ -38,7 +38,7 @@ def search_author(string):
           readerr = csv.reader(j)
           for row in readerr:
             if(row[2]==author):
-              print('\033[95m'+row[0]+'\033[0m')
+              print('\033[94m'+row[0]+'\033[0m')
           print('')
      
       
