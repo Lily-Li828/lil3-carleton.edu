@@ -2,6 +2,8 @@
 import sys
 import csv
 
+#function which print out titles of books according to strings it contains.
+
 def search_title(string):
   with open('books.csv', newline='') as k:
     reader = csv.reader(k)
@@ -11,6 +13,7 @@ def search_title(string):
         print(title)
 
 
+#function which print out titles of books according to year of publication.
 def search_year(startY, endY):
   with open('books.csv', newline='') as k:
     reader = csv.reader(k)
@@ -19,6 +22,8 @@ def search_year(startY, endY):
       if(year>= startY and year <= endY):
         print(row[0])
 
+
+#function which print out authors' names and books according to string in their name
 
 def search_author(string):
  with open('books.csv', newline='') as k:
@@ -37,7 +42,7 @@ def search_author(string):
           print('')
      
       
-
+#implementation of different functions according to users' input
   
 try:
   if (sys.argv[1] == 'st' or sys.argv[1] == 'search-title'  ):
