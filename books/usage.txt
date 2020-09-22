@@ -1,0 +1,32 @@
+#1
+Name
+search-title ---displays a list of books with titles containing a certain string
+
+Synopsis
+python3 books.py st [string ]
+python3 books.py search-title [string]
+
+Description
+Intakes a search string S, and prints a list of books whose titles contain S (case-insensitive).
+
+#2
+Name
+search-author ---displays a list of authors with names containing a certain string
+
+Synopsis
+python3 books.py sa [string]
+python3 books.py search-author [string]
+
+Description
+Intakes a search string S, print a list of authors whose names contain S (case-insensitive). For each such author, print a list of the author's books.
+
+#3
+Name
+search-year ---displays a list of books published within a certain range of years
+
+Synopsis
+python3 books.py sy [starting year] [ending year]
+python3 books.py search-year [starting year] [ending year]
+
+Description
+Intakes a range of years A to B, print a list of books published between years A and B, inclusive.
