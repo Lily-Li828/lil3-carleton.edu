@@ -27,3 +27,13 @@ python3 books.py year [starting year] [ending year]
 
 Description
 Intakes a range of years A to B, print a list of books published between years A and B, inclusive.
+
+Name
+help---displays usage.txt for users
+
+Synopsis
+python3 books.py h
+python3 books.py help
+
+Description
+Displays entire syntax dictionary of this program
