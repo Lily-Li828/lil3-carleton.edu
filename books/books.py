@@ -8,7 +8,7 @@ import csv
 def search_title(string,reader):
   for row in reader:
     title = row[0]
-    if(string in title.lower()):
+    if(string.lower() in title.lower()):
       print(title)
 
 
@@ -29,7 +29,7 @@ def search_author(string,reader):
   namelist = []
   for row in reader:
     author = row[2]
-    if(string in author.lower() and author not in namelist):
+    if(string.lower() in author.lower() and author not in namelist):
       print('\033[1m'+author+'\033[0m')
       namelist.append(author)
       with open('books.csv', newline='') as j:
@@ -54,7 +54,7 @@ def main():
   try:
     if(sys.argv[1] == 'h' or sys.argv[1] == 'help'  ):
       help_menu()      
-    elif (sys.argv[1] == 'st' or sys.argv[1] == 'search-title'  ):
+    elif (sys.argv[1] == 'st' or sys.argv[1] == 'title'  ):
       try:
         string = sys.argv[2]
         print('\033[4m'+"Below are book titles containing "+string+'\033[0m')
@@ -62,7 +62,7 @@ def main():
       except:
         print("Please enter the string you would like to search")
 
-    elif(sys.argv[1] == 'sy' or sys.argv[1] == 'search-year'):
+    elif(sys.argv[1] == 'sy' or sys.argv[1] == 'year'):
       try:
         startYear = int(sys.argv[2]) 
         endYear = int(sys.argv[3]) 
@@ -71,7 +71,7 @@ def main():
       except:
         print("Please enter the range of publishing years you would like to search, in formate [start year] [end year] ")
 
-    elif(sys.argv[1] == 'sa' or sys.argv[1] == 'search-author'):
+    elif(sys.argv[1] == 'sa' or sys.argv[1] == 'author'):
       try:
         string = sys.argv[2]
         print("Below are authors with names containing "+string)
