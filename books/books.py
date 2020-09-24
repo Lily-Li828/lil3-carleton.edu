@@ -64,10 +64,10 @@ def main():
 
     elif(sys.argv[1] == 'sy' or sys.argv[1] == 'search-year'):
       try:
-        startY = int(sys.argv[2]) 
-        endY = int(sys.argv[3]) 
-        print('\033[4m'+"Below are books publish between ",startY ,"and " ,endY,'\033[0m')
-        search_year(startY, endY,reader)
+        startYear = int(sys.argv[2]) 
+        endYear = int(sys.argv[3]) 
+        print('\033[4m'+"Below are books publish between ",startYear ,"and " ,endYear,'\033[0m')
+        search_year(startYear, endYear,reader)
       except:
         print("Please enter the range of publishing years you would like to search, in formate [start year] [end year] ")
 
